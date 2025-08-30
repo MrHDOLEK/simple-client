@@ -186,8 +186,6 @@ final class SimpleClient
 
     public function consume(?ExtensionInterface $runtimeExtension = null): void
     {
-        $this->setupBroker();
-
         $boundQueues = [];
 
         $routerQueue = $this->getDriver()->createQueue($this->getDriver()->getConfig()->getRouterQueue());
